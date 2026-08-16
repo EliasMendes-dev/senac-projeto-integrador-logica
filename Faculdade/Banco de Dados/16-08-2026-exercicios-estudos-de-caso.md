@@ -116,6 +116,35 @@ O gerente deste clube gostaria de adquirir um sistema de informações, para con
 as aulas que eles freqüentam.  
 Este gerente também gostaria de saber quantas e quais tipos de aulas cada professor ministrou. 
 
+### Entidades
+
+| Entidade           | PK          | Atributos                             | FKs                                    |
+|:-------------------|:------------|:--------------------------------------|:---------------------------------------|
+| `Instrutores`         | `codigo`    | `nome`, `endereco`                    | —                                      |
+| `Aulas`         | `cpf`       | `nome`, `endereco`                    | —                                      |
+| `Estudantes`  | `numero`    | `saldo`                               | `codigo_agencia_fk`, `cpf_cliente`     |
+| `Matricula`  | `numero`    | `saldo`                               | `codigo_agencia_fk`, `cpf_cliente`     |
+
+
+### Relacionamentos
+
+- `Instrutores` **1:N** `Aulas`
+  - Um instrutor pode ministrar várias aulas.
+  - Cada aula é ministrada por um instrutor.
+
+- `Estudantes` **1:N** `Matriculas`
+  - Um estudante pode ter várias matrículas.
+  - Cada matrícula pertence a um estudante.
+
+- `Aulas` **1:N** `Matriculas`
+  - Uma aula pode ter vários estudantes matriculados.
+  - Cada matrícula está relacionada a uma aula.
+
+
+
+
+---
+
 ## Estudo de caso 4 
 Um instituto de opinião pública vai realizar uma pesquisa em todos os estados da região sul do Brasil, 
 para levantar dados sócio-econômicos sobre os domicílios e as pessoas que neles residem. Para isso,
