@@ -8,11 +8,11 @@ atualizado das mesmas.
 
 ### Entidades
 
-| Entidade | PK | Atributos | FKs |
-|:---|:---|:---|:---|
-| `Agencias` | `codigo` | `nome`, `endereco` | — |
-| `Clientes` | `cpf` | `nome`, `endereco` | — |
-| `Conta_correntes` | `numero` | `saldo` | `codigo_agencia_fk`, `cpf_cliente` |
+| Entidade           | PK          | Atributos                             | FKs                                    |
+|:-------------------|:------------|:--------------------------------------|:---------------------------------------|
+| `Agencias`         | `codigo`    | `nome`, `endereco`                    | —                                      |
+| `Clientes`         | `cpf`       | `nome`, `endereco`                    | —                                      |
+| `Conta_correntes`  | `numero`    | `saldo`                               | `codigo_agencia_fk`, `cpf_cliente`     |
 
 ### Relacionamentos
 
@@ -63,11 +63,11 @@ endereço.
 
 ### Entidades
 
-| Entidade | PK | Atributos | FKs |
-|:---|:---|:---|:---|
-| `Profissionais` | `numero_controle` | `nome`, `endereco`, `data_nascimento`, `profissao` | — |
-| `Contratos` | `numero_unico` | `data_de_inicio`, `data_de_termino`, `valor_por_hora` | `numero_profissional`, `cgc_empresa` |
-| `Empresas_clientes` | `cgc` | `nome`, `endereco` | — |
+| Entidade              | PK                 | Atributos                                                        | FKs                                 |
+|:----------------------|:-------------------|:-----------------------------------------------------------------|:------------------------------------|
+| `Profissionais`       | `numero_controle`  | `nome`, `endereco`, `data_nascimento`, `profissao`              | —                                   |
+| `Contratos`           | `numero_unico`     | `data_de_inicio`, `data_de_termino`, `valor_por_hora`           | `numero_profissional`, `cgc_empresa` |
+| `Empresas_clientes`   | `cgc`              | `nome`, `endereco`                                               | —                                   |
 
 ### Relacionamentos
 
