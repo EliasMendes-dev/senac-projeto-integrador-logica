@@ -218,6 +218,15 @@ localização (rua, bairro, cidade e estado).
 Nos domicílios particulares, são pesquisados o número de televisões e rádios existentes. Nos
 domicílios coletivos, são levantadas as informações de idade, sexo e grau de instrução.
 
+
+```sql
+CREATE DATABASE opiniao_socioeconomica;
+USE opiniao_socioeconomica;
+
+
+```
+
+
 ## Estudo de caso 5
 
 Uma clínica veterinária, especializada no tratamento de cães e gatos, pretende informatizar o seu
