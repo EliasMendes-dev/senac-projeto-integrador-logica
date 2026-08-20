@@ -1,10 +1,11 @@
 public class Exemplo1 {
     public static void main(String[] args) {
         System.out.println("Esse algoritmo vai listar meus 5 livros favoritos.\n");
-        String[] livros = { "O Horror de Dunwich", "Dagon", "O Chamado de Cthulhu", "A pirâmide Vermelha", "O Trono de Fogo" };
 
-        for (int i = 0; i < livros.length; i++) {
-            System.out.println((i + 1) + "-) " + livros[i]);
-        }
+        System.out.println("1-) O Horror de Dunwich");
+        System.out.println("2-) Dagon");
+        System.out.println("3-) O Chamado de Cthulhu");
+        System.out.println("4-) A Pirâmide Vermelha");
+        System.out.println("5-) O Trono de Fogo");
     }
 }
