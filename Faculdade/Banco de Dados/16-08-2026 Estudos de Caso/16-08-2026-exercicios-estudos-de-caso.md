@@ -288,15 +288,14 @@ CREATE TABLE IF NOT EXISTS domicilio_particular (
 
 CREATE TABLE IF NOT EXISTS domicilio_coletivo (
     id_domicilio INT PRIMARY KEY,
-    idade INT NOT NULL,
-    sexo ENUM('M', 'F', 'Outro'),
-    grau_instrucao ENUM('Fundamental', 'Médio', 'Superior', 'Pós-graduação', 'Mestrado', 'Doutorado'),
     FOREIGN KEY (id_domicilio) REFERENCES domicilio(id)
 );
 
 CREATE TABLE IF NOT EXISTS pessoa (
     id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(100) NOT NULL,
+    idade INT,
+    sexo ENUM('M', 'F', 'Outro'),
+    grau_instrucao ENUM('Fundamental', 'Médio', 'Superior', 'Pós-graduação', 'Mestrado', 'Doutorado'),
     id_domicilio INT NOT NULL,
     FOREIGN KEY (id_domicilio) REFERENCES domicilio(id)
 );
